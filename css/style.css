@@ -1,3 +1,18 @@
+html, body {
+	height: 100%;
+}
+
+#contentWrapper {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -4em;
+	padding: 0 0 4em;
+}
+
+#contentWrapper .container {
+	padding-bottom: 2em;
+}
+
 .jumbotron {
 	padding: 2em;
 	height: 30em;
@@ -33,15 +48,17 @@
 }
 
 .footer {
-	background-color: #303f9f;
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 	height: 4em;
+	background-color: #303f9f;
+}
+
+.footer .container {
+	width: auto;
+	max-width: 20em;
+	padding: 1em 1em 0 1em;
 }
 
 .footer p {
-	position: absolute;
-	right: 2em;
-	top: 1em;
+	text-align: center;
 }
