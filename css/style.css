@@ -1,64 +1,108 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
+
 html, body {
-	height: 100%;
+   height: 100%;
+   font-family:'Open Sans',arial,sans-serif;
 }
 
-#contentWrapper {
-	min-height: 100%;
-	height: auto;
-	margin: 0 auto -4em;
-	padding: 0 0 4em;
+a {
+  color:#222222;
 }
 
-#contentWrapper .container {
-	padding-bottom: 2em;
+.wrapper, .row {
+   height: 100%;
+   margin-left:0;
+   margin-right:0;
 }
 
-.jumbotron {
-	padding: 2em;
-	height: 30em;
-	text-align: center;
-	background-color: #3f51b5;
+.column {
+    height: 100%;
+    overflow: auto;
+    *zoom:1;
 }
 
-.jumbotron h1 , p {
-	color: #ffffff;
+.column .padding {
+    padding: 20px;
 }
 
-.btn {
-	background-color: #ff4081;
+.box {
+  	bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #0097a7;
 }
 
-.col-md-4 h4{
-	color:#212121;
-	text-align: center;
+.divider {
+	margin-top:32px;
 }
 
-.col-md-4 img{
-	display: block;
-	margin: 0 auto;
-	max-width: 80%;
-	max-height: 60%;
+#main {
+    background-color:#fefefe;
+    font-family: Palatino Linotype;
 }
 
-.col-md-4 i{
-	font-size:12em;
-	padding-top: 0.1em;
-	padding-left: auto;
-	padding-right: auto;
+.logo {
+  min-height: 2em;
+  font-size: 3vw;
+  padding: 1em;
 }
 
-.footer {
-	width: 100%;
-	height: 4em;
-	background-color: #303f9f;
+#sidebar, #sidebar a {
+  color:#fefefe;
+  padding: 0;
 }
 
-.footer .container {
-	width: auto;
-	max-width: 20em;
-	padding: 1em 1em 0 1em;
+.sidebar-nav .navbar {
+  padding: 0;
+  margin-top: 2em;
 }
 
-.footer p {
-	text-align: center;
+ul {
+  width: 100%;
+}
+
+.sidebar-nav .navbar ul li{
+  float: none;
+  display: block;
+  height: 4em;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.sidebar-nav .navbar ul li:hover{
+  background-color: #007b88;
+}
+
+.sidebar-nav .navbar li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar, .navbar-header {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+
+.col-sm-9.full {
+    width: 100%;
+}
+
+#contentHeader h1{
+  font-size: 6em;
+  text-align: center; 
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#contentBody {
+  padding: 2em;
+}
+
+#contentBody p {
+  font-size: 1.5em;
 }
