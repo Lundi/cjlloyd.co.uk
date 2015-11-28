@@ -23,6 +23,8 @@ module.exports = function(grunt) {
     /*Load in required Grunt plugins*/
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    /*Register task sass to generate css from sass*/
+    grunt.registerTask('gencss',['sass']);
     /*Register task default to execute watch*/
     grunt.registerTask('default',['watch']);
 }
