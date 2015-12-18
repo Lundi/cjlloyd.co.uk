@@ -1,8 +1,7 @@
 //colors
-$color_log_cabin_approx: #222222;
-$color_bondi_blue_approx: #0097a7;
-$color_romance_approx: #fefefe;
-$color_blue_lagoon_approx: #007b88;
+$color_white: rgba(255,255,255,0.6);
+$color_pink: #FF4081;
+$color_blue_grey: #607D8B;
 
 //fonts
 $font_0: Open Sans;
@@ -10,122 +9,105 @@ $font_1: arial;
 $font_2: sans-serif;
 $font_3: Palatino Linotype;
 
-//urls
-$url_0: url(http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700);
-
-//@extend-elements
-//original selectors
-//.wrapper, .row
-%extend_1 {
-  height: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-//original selectors
-//.navbar, .navbar-header
-%extend_2 {
-  background-color: transparent;
-  border: none;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: none;
-}
-
+//images
+$background_0: url(../img/la.jpg);
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700);
-html {
-  height: 100%;
-  font-family: $font_0, $font_1, $font_2;
-}
+
 body {
+  background: $background_0 center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+  background-size: cover;
+  font-family: $font_3, $font_0, $font_2, $font_1;
+  background-color: $color_blue_grey;
+}
+
+#global_wrapper {
+  width: 100%;
   height: 100%;
-  font-family: $font_0, $font_1, $font_2;
 }
-a {
-  color: $color_log_cabin_approx;
-}
-.wrapper {
-  @extend %extend_1;
-}
-.row {
-  @extend %extend_1;
-}
-.column {
-  height: 100%;
-  overflow: auto;
-  *zoom: 1;
-  .padding {
-    padding: 20px;
-  }
-}
-.box {
+
+#content_wrapper {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: $color_bondi_blue_approx;
+  width: 100vw;
+  height: 100vh;
 }
-.divider {
-  margin-top: 32px;
-}
-#main {
-  background-color: $color_romance_approx;
-  font-family: $font_3;
-}
-.logo {
-  min-height: 2em;
-  font-size: 3vw;
-  padding: 1em;
-}
-#sidebar {
-  color: $color_romance_approx;
-  padding: 0;
-  a {
-    color: $color_romance_approx;
-    padding: 0;
-  }
-}
-ul {
-  width: 100%;
-}
-.navbar {
-  @extend %extend_2;
-}
-.navbar-header {
-  @extend %extend_2;
-}
-#contentBody {
-  padding: 2em;
-  p {
-    font-size: 1.5em;
-  }
-}
-.sidebar-nav .navbar {
-  padding: 0;
-  margin-top: 2em;
-  ul li {
-    float: none;
-    display: block;
-    height: 4em;
-    padding: 1em;
-    text-align: center;
-    font-size: 1.5em;
-    &:hover {
-      background-color: $color_blue_lagoon_approx;
-    }
-  }
-  li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-}
-.col-sm-9.full {
-  width: 100%;
-}
-#contentHeader h1 {
-  font-size: 6em;
+
+#top_header {
+  width: 80vw;
+  height: 80vh;
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+    color: $color_white;
+    margin-top: 10vh;
+    font-size: 750%;
+  }
+  
+  nav {
+    margin-bottom: 8vh;
+  }
+
+  i {
+    margin: 2vw;
+    color: $color_white;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+  }
+  i:hover {
+    color: $color_pink;
+  }
+
 }
+
+#main_body {
+  width: 80vh;
+  height: 10vh;
+  margin: auto;
+  text-align: center;
+
+  .post {
+    text-align: left;
+    padding: 3vw;
+    margin-bottom: 3vh;
+    background-color: $color_white;
+    min-height: 30vh;
+    box-shadow: 20px;
+  }
+}
+
+.accent {
+  color: $color_pink;
+}
+
+#more {
+  width: 40vw;
+  background-color: $color_white;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  font-family: $font_0;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+#more:hover {
+  background-color: transparent;
+  color: $color_white;
+}
+
